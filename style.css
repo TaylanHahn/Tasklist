@@ -1,0 +1,241 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: oldNews;
+    src: url(arq/oldNews.ttf);
+}
+
+@font-face {
+    font-family: elegant;
+    src: url(arq/elegantType.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(arq/thelines01.gif);
+    background-repeat: repeat-y;
+    background-size: cover;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    max-width: 100%;
+}
+
+header{
+    font-family: bebas, sans-serif;
+    width: 100%;
+    padding: 3%;
+    text-align: center;
+}
+
+h1{
+    font-family: oldNews, sans-serif;
+    font-size: 3em;
+}
+
+#taskInput {
+    width: 40%;
+    margin-bottom: 10px;
+    padding: 2%;
+    font-size: 1.4em;
+    font-weight: 700;
+    font-family: elegant, sans-serif;
+}
+
+#taskList {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    font-family: elegant, sans-serif;
+    font-size: 2em;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+}
+
+button{
+    font-family: oldNews, sans-serif;
+    padding: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1.1em;
+    font-weight: 600;
+    background-color: #b1fc6c;
+    border: none;
+    border-radius: 30px;
+    margin-bottom: 3%;
+}
+
+button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.taskItem {
+    margin: 0 auto;
+}
+
+.taskItem button {
+   margin: auto;
+    padding: 1%;
+    background: #ff6969;
+    font-family: oldNews, sans-serif;
+    font-size: 0.5em;
+    border: none;
+    width: 200px;
+    border-radius: 30px;
+    margin-top: 20%;
+}
+
+.taskItem button:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+li{
+    display: flex;
+    flex-direction: column;
+    background-image: url(arq/postit.png);
+    background-size: cover;
+    padding: 5%;
+    margin-top: 100px;
+    margin-bottom: 5px;
+    background-repeat: no-repeat;
+    min-width: 80px;
+    max-width: 400px;
+}
+
+/* footer — Sor, já deixei um modelo "pronto" no GitHub, daí copio e edito conforme as configurações da página. */
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin:0;
+    padding: 2%;
+    position: relative;
+    bottom: 0;
+    margin-top: 22%;
+}
+
+.footer-btn a {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: solid .15rem #000000;
+    text-decoration: none;
+    border-radius: 50%;
+    overflow: hidden;
+    font-size: 2em;
+    position: relative;
+    margin-left: 10px;
+    color: #000000;
+}
+
+.footer-btn a::before {
+    background: #FFF47E;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.footer-btn a:hover::before {
+    width: 100%;
+}
+
+.footer-text p {
+    font-family: sans-serif;
+    font-size: 1.1em;
+    font-weight:bolder;
+    color: #000000;
+}
+
+.footer-text a {
+    text-decoration: none;
+}  
+
+.footer-text span{
+    color: #000000;
+}
+
+.footer-text span:hover {
+    cursor: pointer;
+    color: #ffef44;
+}
+
+/*RESPONSIVIDADE*/
+
+@media all and (max-width: 820px){
+    h1{
+        font-size: 2em;
+    }
+
+    #taskInput{
+        width: 80%;
+        margin-top: 5%;
+    }
+
+    button{
+        width: 80%;
+        padding: 3%;
+    }
+
+    .taskItem{
+        margin-top: 5%;
+    }
+
+    li{
+        max-width: 200px;
+        max-height: 250px;
+    }
+
+    .taskItem button {
+        margin: auto;
+         padding: 2%;
+         background: #f85b5b;
+         font-family: oldNews, sans-serif;
+         font-size: 0.5em;
+         border: none;
+         width: 100px;
+         border-radius: 30px;
+         margin-top: 20%;
+     }
+
+     .footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 1em;
+        margin: auto;
+        position: relative;
+        bottom: 0;
+        margin-top: 15%;
+    }
+
+    .footer-text p {
+        font-family: sans-serif;
+        color: #000000;
+        margin-top: 10px;
+    }
+
+}
